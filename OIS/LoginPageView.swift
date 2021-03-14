@@ -11,7 +11,7 @@ let lightGreyColor = Color(red: 239.0/255.0, green: 243.00/255.0, blue: 244.0/25
 
 let darkRedColor = Color(red: 0.72, green: 0.07, blue: 0.20)
 
-struct ContentView: View {
+struct LoginPageView: View {
     
     @State var username: String = ""
     @State var password: String = ""
@@ -47,13 +47,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-
 struct HelloText: View {
     var body: some View {
         VStack{
@@ -67,7 +60,7 @@ struct HelloText: View {
 
 struct Logo: View {
     var body: some View {
-        Image("logo_en")
+        Image("TLU_logo")
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: 155, height: 30,alignment:/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -113,3 +106,11 @@ struct LoginButtonContent: View {
             .cornerRadius(35.0)
     }
 }
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginPageView()
+    }
+}
+
